@@ -8,19 +8,31 @@ if (listFromStorage) {
 }
 
 function addTask() {
-  listArray.push(inputElement.value);
-  inputElement.value = "";
-  localStorage.setItem("tasks", JSON.stringify(listArray));
-  renderItems();
+  if (inputElement.value === "") {
+    alert("Please enter task first");
+  } else {
+    listArray.push(inputElement.value);
+    inputElement.value = "";
+    localStorage.setItem("tasks", JSON.stringify(listArray));
+    renderItems();
+  }
 }
-
 function renderItems() {
   let itemsList = "";
+
   for (let i = 0; i < listArray.length; i++) {
     itemsList += `<li> ${listArray[i]}</li>`;
   }
   listContainer.innerHTML = itemsList;
 }
 
+function clearAll() {
+  listArray = [];
+  localStorage.removeItem("tasks");
+  renderItems();
+}
+
+const clearButton = document.querySelector("#clear-btn");
+clearButton.addEventListener("click", clearAll);
 const addButton = document.querySelector("#add-item");
 addButton.addEventListener("click", addTask);
