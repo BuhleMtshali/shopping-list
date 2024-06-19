@@ -2,7 +2,6 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50%; /* or any width you prefer */
+  margin: 0 auto;
 }
