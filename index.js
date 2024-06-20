@@ -21,7 +21,7 @@ function renderItems() {
   let itemsList = "";
 
   for (let i = 0; i < listArray.length; i++) {
-    itemsList += `<li> ${listArray[i]} </li><button class="delete-btn" data-index="${i}">Delete</button>`;
+    itemsList += `<li> ${listArray[i]} <button class="delete-btn" data-index="${i}">Delete</button></li>`;
   }
   listContainer.innerHTML = itemsList;
   let deleteButtons = document.querySelectorAll(".delete-btn");

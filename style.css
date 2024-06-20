@@ -1,10 +1,16 @@
 body {
   font-family: "Inter Tight", sans-serif;
   background-color: #cad2c5;
+  user-select: none;
 }
 .container {
-  width: 50%; /* or any width you prefer */
+  width: 60%; /* or any width you prefer */
   margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+h1 {
+  user-select: none;
 }
 ul {
   display: flex;
@@ -12,16 +18,22 @@ ul {
   flex-wrap: wrap;
   padding-left: 0;
   padding: 15px;
+  text-align: center;
 }
 li {
   margin: 10px;
   font-size: 22px;
+  user-select: none;
 }
 .delete-btn {
-  border: none;
+  border: 3px solid #52796f;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 16px;
   padding: 0 6px;
+  background-color: #2f3e46;
+  color: #cad2c5;
+  cursor: pointer;
+  margin: 10px;
 }
 #input-element,
 #add-item,
@@ -31,4 +43,21 @@ li {
   border-radius: 8px;
   font-size: 15px;
   cursor: pointer;
+}
+#add-item,
+#clear-btn {
+  background-color: #2f3e46;
+  color: #cad2c5;
+  font-weight: 600;
+}
+#input-element {
+  border: 3px solid #2f3e46;
+  background-color: #cad2c5;
+}
+::placeholder {
+  color: #2f3e46;
+  font-weight: 600;
+}
+*:focus {
+  outline: none;
 }
