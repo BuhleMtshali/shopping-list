@@ -4,38 +4,43 @@ body {
   user-select: none;
 }
 .container {
-  width: 60%; /* or any width you prefer */
+  width: 50%; /* or any width you prefer */
   margin: 0 auto;
-  flex-wrap: wrap;
-  text-align: center;
 }
 h1 {
   user-select: none;
+  color: #c1121f;
+  font-weight: 700;
+}
+.green {
+  color: #2f3e46;
 }
 ul {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
   padding-left: 0;
-  padding: 15px;
   text-align: center;
   align-items: center;
   align-content: center;
 }
 li {
   margin: 10px;
-  font-size: 22px;
+  font-size: 26px;
   user-select: none;
   text-align: center;
+  color: #283618;
+  font-weight: 600;
 }
 .delete-btn {
-  border: 3px solid #52796f;
+  border: 3px solid #2f3e46;
   font-size: 16px;
   border-radius: 16px;
   padding: 6px 9px;
-  background-color: #2f3e46;
+  background-color: #c1121f;
   color: #cad2c5;
   cursor: pointer;
+  font-weight: 600;
 }
 #input-element,
 #add-item,
@@ -53,8 +58,10 @@ li {
   font-weight: 600;
 }
 #input-element {
-  border: 3px solid #2f3e46;
+  border: 3px solid #c1121f;
   background-color: #cad2c5;
+  margin-bottom: 10px;
+  margin-right: 5px;
 }
 ::placeholder {
   color: #2f3e46;
@@ -62,4 +69,7 @@ li {
 }
 *:focus {
   outline: none;
+}
+#clear-btn {
+  background-color: #c1121f;
 }
